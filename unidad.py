@@ -1,11 +1,15 @@
 from carta import Card
 
 class Unit(Card):
+    
     def __init__(self, nombre, valor, poder, respuesta, resistencia):
         super().__init__(nombre, valor, poder, resistencia)
         self.valor = valor
         self.respuesta = respuesta
 
+    def ataque(self, oponente):
+        self.oponente = oponente
+    
     def cinturon_rojo(self, costo, poder, resistencia):
         self.costo = 3
         self.poder = 3
