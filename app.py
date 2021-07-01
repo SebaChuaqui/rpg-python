@@ -17,3 +17,21 @@ print("el costo de la carta es: ", algoritmo.costo)
 print("el texto de la carta es: ", algoritmo.texto)
 print("el status de la carta es: ", algoritmo.status)
 print("el magnitud de la carta es: ", algoritmo.magnitud)
+
+promesa_nomanejada=Efecto("Promesa No Manejada",1,"reducir la resistencia del objetivo en 2","Resistencia",-2)
+
+print("el nombre de la carta es: ", promesa_nomanejada.nombre)
+print("el costo de la carta es: ", promesa_nomanejada.costo)
+print("el texto de la carta es: ", promesa_nomanejada.texto)
+print("el status de la carta es: ", promesa_nomanejada.status)
+print("el magnitud de la carta es: ", promesa_nomanejada.magnitud)
+
+programacion_pareja=Efecto("Programacion en Pareja",3,"aumentar el poder del objetivo en 2","Poder",2)
+
+print("el nombre de la carta es: ", programacion_pareja.nombre)
+print("el costo de la carta es: ", programacion_pareja.costo)
+print("el texto de la carta es: ", programacion_pareja.texto)
+print("el status de la carta es: ", programacion_pareja.status)
+print("el magnitud de la carta es: ", programacion_pareja.magnitud)
+
+

@@ -7,7 +7,6 @@ class Unidad(Carta):
         self.resistencia = resistencia
         self.poder = poder
 
-
     def modifica_poder(self,num):
         self.poder = self.poder + num
 
