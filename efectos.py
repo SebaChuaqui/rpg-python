@@ -6,3 +6,8 @@ class Efects:
         self.nombre = nombre
         self.valor = valor
 
+    def algoritmo(self, costo, status, magnitud):
+        self.costo = 2
+        self.status = status
+        self.magnitud += 3
+        
