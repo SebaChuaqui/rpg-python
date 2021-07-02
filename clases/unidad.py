@@ -12,3 +12,6 @@ class Unidad(Carta):
 
     def modifica_resistencia(self,num):
         self.resistencia = self.resistencia + num
+
+    def ataque(self,unidad):
+        unidad.modifica_resistencia(-self.poder)

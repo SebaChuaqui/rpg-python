@@ -7,16 +7,24 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Template para Hackathon</title>
+        <title>LA BATALLA DE LOS NINJAS</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+
+    <style>
+    
+    
+    
+    </style>
     </head>
+
     <body>
-        <h1>Template para la Hackathon</h1>
+        <h1>ESCENARIO DE LUCHA</h1>
         <ul>
-            {% for objeto in objetos%}
-                <li>{{ objeto.nombre }} - {{objeto.edad}}</li>
+            {% for carta in cartas %} 
+                <li> Nombre: {{ carta.nombre }} / Costo: {{ carta.costo }}</li>
+                <li> Poder: {{ carta.poder }}  / Resistencia: {{ carta.resistencia }}</li>
             {% endfor %}
         </ul>
     </body>
