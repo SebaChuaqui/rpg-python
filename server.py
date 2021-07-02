@@ -1,9 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from clases.carta import Carta 
 from clases.unidad import Unidad
 from clases.efectos import Efecto 
 
 app = Flask(__name__)
+
+
 
 
 jugador1=[]
@@ -44,7 +46,11 @@ print("el costo de la carta es: ", ninja_negro.costo)
 print("el poder de la carta es: ", ninja_negro.poder) 
 
 @app.route("/")
-def hello_world():
+def index():
     return render_template('index.html', cartas1=[ninja_rojo] , cartas2=[ninja_negro])
+
+@app.route('/images/<path:path>')
+def images(path):
+    return send_from_directory('images', path)
 
 app.run()

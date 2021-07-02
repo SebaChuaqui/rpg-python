@@ -4,56 +4,43 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>LA BATALLA DE LOS NINJAS</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
 
-    <style>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LA BATALLA DE LOS NINJAS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
     
-    .cuadros {
-    background: rgb(235,235,235);
-    background: linear-gradient(135deg, rgba(235,235,235,1) 34%, rgba(192,192,192,1) 50%);
-    width: 300px;
-    min-height: 500px;
-    margin: 10px;
-    vertical-align: top;
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    }
+</head>
 
-    .cuadros p{
-    min-height: 184px;
-    padding-left: 5px;
-    padding-right: 5px;
-    }
+<body>
+    <div class="row centro cabecera">
+        <h1>Escenario  de Batalla</h1>
+    </div>
+    <p></p>
+    <div class="row centro">    
 
-    </style>
-    </head>
-
-    <body>
-        
-        <div class="row">
         <div class="cuadros">
-            {% for carta1 in cartas1 %} 
-            <h1>Nombre: {{ carta1.nombre }} / Costo: {{ carta1.costo }}</h1>
-            <img src="" width=300 height=165 alt="ninja rojo">
+            {% for carta1 in cartas1 %}
+            <h5>Nombre: {{ carta1.nombre }} / Costo: {{ carta1.costo }}</h5>
+            <img src="images/ninja_rojo.jpg" width=300 height=165 alt="ninja rojo">
             <p> Poder: {{ carta1.poder }} </p>
             <p>Resistencia: {{ carta1.resistencia }}</p>
-            {% endfor %}
+            {% endfor %}       
         </div>
+        
         <div class="cuadros">
-            {% for carta2 in cartas2 %} 
-            <h1>Nombre: {{ carta2.nombre }} / Costo: {{ carta2.costo }}</h1>
-            <img src="" width=300 height=165 alt="ninja negro">
+            {% for carta2 in cartas2 %}
+            <h5>Nombre: {{ carta2.nombre }} / Costo: {{ carta2.costo }}</h5>
+            <img src="images/ninja_negro.jpg" width=300 height=165 alt="ninja negro">
             <p> Poder: {{ carta2.poder }} </p>
             <p>Resistencia: {{ carta2.resistencia }}</p>
             {% endfor %}
         </div>
-        </div>
-        </div>        
-    </body>
+    </div>
+
+</body>
+
 </html>
