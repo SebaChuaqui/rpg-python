@@ -45,6 +45,6 @@ print("el poder de la carta es: ", ninja_negro.poder)
 
 @app.route("/")
 def hello_world():
-    return render_template('index.html', cartas=[ninja_rojo, ninja_negro])
+    return render_template('index.html', cartas1=[ninja_rojo] , cartas2=[ninja_negro])
 
 app.run()

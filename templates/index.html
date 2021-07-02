@@ -14,18 +14,46 @@
 
     <style>
     
-    
-    
+    .cuadros {
+    background: rgb(235,235,235);
+    background: linear-gradient(135deg, rgba(235,235,235,1) 34%, rgba(192,192,192,1) 50%);
+    width: 300px;
+    min-height: 500px;
+    margin: 10px;
+    vertical-align: top;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .cuadros p{
+    min-height: 184px;
+    padding-left: 5px;
+    padding-right: 5px;
+    }
+
     </style>
     </head>
 
     <body>
-        <h1>ESCENARIO DE LUCHA</h1>
-        <ul>
-            {% for carta in cartas %} 
-                <li> Nombre: {{ carta.nombre }} / Costo: {{ carta.costo }}</li>
-                <li> Poder: {{ carta.poder }}  / Resistencia: {{ carta.resistencia }}</li>
+        
+        <div class="row">
+        <div class="cuadros">
+            {% for carta1 in cartas1 %} 
+            <h1>Nombre: {{ carta1.nombre }} / Costo: {{ carta1.costo }}</h1>
+            <img src="" width=300 height=165 alt="ninja rojo">
+            <p> Poder: {{ carta1.poder }} </p>
+            <p>Resistencia: {{ carta1.resistencia }}</p>
             {% endfor %}
-        </ul>
+        </div>
+        <div class="cuadros">
+            {% for carta2 in cartas2 %} 
+            <h1>Nombre: {{ carta2.nombre }} / Costo: {{ carta2.costo }}</h1>
+            <img src="" width=300 height=165 alt="ninja negro">
+            <p> Poder: {{ carta2.poder }} </p>
+            <p>Resistencia: {{ carta2.resistencia }}</p>
+            {% endfor %}
+        </div>
+        </div>
+        </div>        
     </body>
 </html>
