@@ -49,8 +49,8 @@ print("el poder de la carta es: ", ninja_negro.poder)
 def index():
     return render_template('index.html', cartas1=[ninja_rojo] , cartas2=[ninja_negro])
 
-@app.route('/images/<path:path>')
-def images(path):
-    return send_from_directory('images', path)
+# @app.route('/images/<path:path>')
+# def images(path):
+#     return send_from_directory('images', path)
 
 app.run()
